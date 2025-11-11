@@ -7,11 +7,37 @@ To write a program to implement the Decision Tree Regressor Model for Predicting
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
-1. 
-2. 
-3. 
-4. 
+## Algorithm:
+### Step 1: Load and Explore the Dataset
+- Import the dataset using a data analysis library.
+- Display the first few rows to understand the structure.
+- Check for missing values and basic data types using info methods.
+
+---
+
+### Step 2: Preprocess the Data
+- Convert categorical variables (e.g., Position) into numeric form using encoding (e.g., Label Encoding).
+- Split the data into:
+  - **Features (X)** – Independent variables like Position, Level
+  - **Target (y)** – Dependent variable like Salary
+
+---
+
+### Step 3: Split the Data and Train the Model
+- Split the dataset into training and testing sets (e.g., 80% train, 20% test).
+- Initialize and train a **Decision Tree Regressor** using the training data.
+
+---
+### Step 4: Make Predictions and Evaluate the Model
+- Predict the output for the test set using the trained model.
+- Evaluate the model’s performance using:
+  - **Mean Squared Error (MSE)**
+  - **Root Mean Squared Error (RMSE)**
+  - **R² Score (Coefficient of Determination)**
+- Use the trained model to make predictions on new/unseen data points.
+
+---
+
 
 ## Program:
 ```
