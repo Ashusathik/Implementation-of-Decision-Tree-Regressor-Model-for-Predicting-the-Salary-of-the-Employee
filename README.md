@@ -81,9 +81,6 @@ dt.predict([[5,6]])
 
 <img width="713" height="103" alt="image" src="https://github.com/user-attachments/assets/b7cff12a-5119-4791-b9d7-075658678d11" />
 
-## Y_Pred:
-
-<img width="667" height="119" alt="image" src="https://github.com/user-attachments/assets/472fa4c7-c5f9-49de-bfce-3585e7dfce7d" />
 
 ## MSE:
 
