@@ -17,13 +17,90 @@ To write a program to implement the Decision Tree Regressor Model for Predicting
 ```
 /*
 Program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
-Developed by: 
-RegisterNumber:  
+Developed by: ASHRATHI S
+RegisterNumber:  212224230025
 */
+```
+```python
+Program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
+Developed by: IRFAN KHAN.N
+RegisterNumber:  212224230097
+```
+```python
+import pandas as pd
+df=pd.read_csv("Salary.csv")
+df.head()
+
+df.info()
+
+df.isnull().sum()
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+df["Position"]=le.fit_transform(df["Position"])
+print(df.head())
+
+x=df[["Position","Level"]]
+y=df["Salary"]
+
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=2)
+
+from sklearn.tree import DecisionTreeRegressor
+dt=DecisionTreeRegressor()
+
+dt.fit(x_train,y_train)
+y_pred=dt.predict(x_test)
+print("Name: B Surya Prakash")
+print("Reg No: 212224230281")
+print(y_pred)
+
+from sklearn import metrics
+
+mse=metrics.mean_squared_error(y_test,y_pred)
+mse
+
+import numpy as np
+
+rmse=np.sqrt(mse)
+rmse
+
+r2=metrics.r2_score(y_test,y_pred)
+r2
+
+dt.predict([[5,6]])
 ```
 
 ## Output:
-![Decision Tree Regressor Model for Predicting the Salary of the Employee](sam.png)
+
+<img width="719" height="138" alt="image" src="https://github.com/user-attachments/assets/167cc4b4-ec46-4b3b-9b02-74f46f41ed88" />
+
+<img width="722" height="154" alt="image" src="https://github.com/user-attachments/assets/abdf004e-c219-4681-a84e-f7606485f1a9" />
+
+<img width="722" height="66" alt="image" src="https://github.com/user-attachments/assets/2f5f81c3-a284-4ed0-b554-20498dc4a44f" />
+
+<img width="713" height="103" alt="image" src="https://github.com/user-attachments/assets/b7cff12a-5119-4791-b9d7-075658678d11" />
+
+## Y_Pred:
+
+<img width="667" height="119" alt="image" src="https://github.com/user-attachments/assets/472fa4c7-c5f9-49de-bfce-3585e7dfce7d" />
+
+## MSE:
+
+<img width="720" height="25" alt="image" src="https://github.com/user-attachments/assets/ae71b6d6-72f3-44d4-bee9-495d9b888876" />
+
+### RMSE:
+
+<img width="715" height="22" alt="image" src="https://github.com/user-attachments/assets/7ca241f1-56cf-435a-873b-73454b371cad" />
+
+### R2 Score:
+
+<img width="719" height="26" alt="image" src="https://github.com/user-attachments/assets/44150a59-ea96-4ec7-8153-3c046768c51d" />
+
+<img width="727" height="33" alt="image" src="https://github.com/user-attachments/assets/c6970e9a-178f-4f4f-aabc-732f9c4fb5ca" />
+
+
+
 
 
 ## Result:
